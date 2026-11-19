@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,380 +5,75 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#090b16">
 <title>Alpha MP3 | Video Converter</title>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
-
-:root{
- --bg:#090b16;
- --panel:#111526;
- --panel2:#171d31;
- --purple:#875bff;
- --cyan:#36d9e8;
- --text:#f5f5ff;
- --muted:#8991aa;
- --border:rgba(255,255,255,.09);
- --green:#37d99a;
- --red:#ff627d;
-}
-
+:root{--bg:#090b16;--panel2:#171d31;--purple:#875bff;--cyan:#36d9e8;--text:#f5f5ff;--muted:#8991aa;--border:rgba(255,255,255,.09);--green:#37d99a;--red:#ff627d}
 *{box-sizing:border-box}
-
-body{
- margin:0;
- min-height:100vh;
- background:
- radial-gradient(ellipse at 80% 0%,#30215c55,transparent 45%),
- radial-gradient(ellipse at 10% 50%,#102b4c44,transparent 45%),
- var(--bg);
- color:var(--text);
- font-family:'Cairo',sans-serif;
-}
-
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#30215c55,transparent 45%),radial-gradient(ellipse at 10% 50%,#102b4c44,transparent 45%),var(--bg);color:var(--text);font-family:'Cairo',Tahoma,sans-serif}
 button,input,select{font-family:inherit}
-
-.container{
- width:min(850px,94%);
- margin:auto;
- padding:30px 0 55px;
-}
-
-header{
- display:flex;
- align-items:center;
- justify-content:space-between;
- margin-bottom:38px;
-}
-
-.logo{
- display:flex;
- align-items:center;
- gap:12px;
- font-size:22px;
- font-weight:900;
- direction:ltr;
-}
-
-.logo-icon{
- width:43px;
- height:43px;
- display:grid;
- place-items:center;
- border-radius:14px;
- background:linear-gradient(135deg,var(--purple),#4430a9);
- box-shadow:0 5px 25px #875bff55;
- font-size:21px;
-}
-
-.status{
- color:var(--green);
- font-size:11px;
- background:#37d99a15;
- border:1px solid #37d99a35;
- border-radius:30px;
- padding:6px 12px;
-}
-
+.container{width:min(850px,94%);margin:auto;padding:30px 0 55px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:38px}
+.logo{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:900;direction:ltr}
+.logo-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--purple),#4430a9);box-shadow:0 5px 25px #875bff55;font-size:21px}
+.status{color:var(--green);font-size:11px;background:#37d99a15;border:1px solid #37d99a35;border-radius:30px;padding:6px 12px}
 .hero{text-align:center;margin-bottom:28px}
-
-.hero h1{
- font-size:clamp(29px,7vw,46px);
- margin:0 0 5px;
- font-weight:900;
- letter-spacing:-1px;
-}
-
-.hero h1 span{
- background:linear-gradient(90deg,#a88aff,#44d8e8);
- background-clip:text;
- -webkit-background-clip:text;
- color:transparent;
-}
-
+.hero h1{font-size:clamp(29px,7vw,46px);margin:0 0 5px;font-weight:900}
+.hero h1 span{background:linear-gradient(90deg,#a88aff,#44d8e8);background-clip:text;-webkit-background-clip:text;color:transparent}
 .hero p{color:var(--muted);font-size:14px;margin:8px 0 17px}
-
-.features{
- display:flex;
- justify-content:center;
- gap:9px;
- flex-wrap:wrap;
-}
-
-.feature{
- background:#ffffff09;
- border:1px solid var(--border);
- border-radius:30px;
- padding:6px 12px;
- font-size:11px;
- color:#c6cbe0;
-}
-
-.panel{
- background:linear-gradient(145deg,#151a2d,#101424);
- border:1px solid var(--border);
- border-radius:22px;
- padding:20px;
- margin-bottom:17px;
- box-shadow:0 15px 50px #0002;
-}
-
-.upload{
- min-height:205px;
- border:2px dashed #7659d977;
- border-radius:17px;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- padding:20px;
- cursor:pointer;
- transition:.25s;
- background:#875bff08;
-}
-
-.upload:hover,.upload.drag{
- border-color:var(--purple);
- background:#875bff17;
-}
-
-.upload-icon{
- width:65px;height:65px;
- border-radius:20px;
- background:#875bff22;
- display:grid;place-items:center;
- font-size:30px;
- margin-bottom:12px;
-}
-
+.features{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.feature{background:#ffffff09;border:1px solid var(--border);border-radius:30px;padding:6px 12px;font-size:11px;color:#c6cbe0}
+.panel{background:linear-gradient(145deg,#151a2d,#101424);border:1px solid var(--border);border-radius:22px;padding:20px;margin-bottom:17px;box-shadow:0 15px 50px #0002}
+.upload{min-height:205px;border:2px dashed #7659d977;border-radius:17px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;cursor:pointer;transition:.25s;background:#875bff08}
+.upload:hover,.upload.drag{border-color:var(--purple);background:#875bff17}
+.upload-icon{width:65px;height:65px;border-radius:20px;background:#875bff22;display:grid;place-items:center;font-size:30px;margin-bottom:12px}
 .upload h3{margin:0;font-size:17px}
 .upload p{color:var(--muted);font-size:12px;margin:7px 0}
-
 .upload strong{color:#b6a3ff;font-size:12px}
-
 #fileInput{display:none}
-
-.settings{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:12px;
- margin-top:18px;
-}
-
-.field label{
- display:block;
- font-size:12px;
- color:var(--muted);
- margin-bottom:7px;
-}
-
-.field select{
- width:100%;
- background:var(--panel2);
- color:white;
- border:1px solid var(--border);
- border-radius:11px;
- padding:12px;
- outline:none;
-}
-
-.section-head{
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:10px;
- margin-bottom:14px;
-}
-
+.settings{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}
+.field select{width:100%;background:var(--panel2);color:#fff;border:1px solid var(--border);border-radius:11px;padding:12px;outline:none}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
 .section-head h3{font-size:15px;margin:0}
-
-.counter{
- background:#875bff20;
- color:#c5b4ff;
- border-radius:20px;
- padding:5px 11px;
- font-size:11px;
-}
-
-.files-list{
- display:flex;
- flex-direction:column;
- gap:9px;
-}
-
-.empty{
- text-align:center;
- color:var(--muted);
- padding:25px 10px;
- font-size:13px;
-}
-
-.file-item{
- background:#ffffff06;
- border:1px solid var(--border);
- border-radius:13px;
- padding:12px;
- display:flex;
- align-items:center;
- gap:11px;
- min-width:0;
-}
-
-.file-icon{
- width:39px;height:39px;
- flex-shrink:0;
- display:grid;
- place-items:center;
- background:#875bff1e;
- border-radius:11px;
- font-size:18px;
-}
-
+.counter{background:#875bff20;color:#c5b4ff;border-radius:20px;padding:5px 11px;font-size:11px}
+.files-list{display:flex;flex-direction:column;gap:9px}
+.empty{text-align:center;color:var(--muted);padding:25px 10px;font-size:13px}
+.file-item{background:#ffffff06;border:1px solid var(--border);border-radius:13px;padding:12px;display:flex;align-items:center;gap:11px;min-width:0}
+.file-icon{width:39px;height:39px;flex-shrink:0;display:grid;place-items:center;background:#875bff1e;border-radius:11px;font-size:18px}
 .file-info{flex:1;min-width:0}
-
-.file-name{
- font-size:12px;
- font-weight:700;
- overflow:hidden;
- white-space:nowrap;
- text-overflow:ellipsis;
-}
-
+.file-name{font-size:12px;font-weight:700;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;direction:ltr;text-align:right}
 .file-meta{font-size:10px;color:var(--muted);margin-top:3px}
-
-.file-state{
- font-size:10px;
- color:var(--muted);
- white-space:nowrap;
-}
-
+.file-state{font-size:10px;color:var(--muted);white-space:nowrap}
 .file-state.done{color:var(--green)}
 .file-state.error{color:var(--red)}
-
-.remove{
- border:0;background:transparent;
- color:#ff7188;
- font-size:19px;
- cursor:pointer;
- padding:4px;
-}
-
-.progress{
- height:4px;
- background:#ffffff10;
- border-radius:10px;
- overflow:hidden;
- margin-top:9px;
-}
-
-.progress-bar{
- height:100%;
- width:0%;
- background:linear-gradient(90deg,var(--purple),var(--cyan));
- border-radius:10px;
- transition:width .2s;
-}
-
-.actions{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:10px;
- margin-top:18px;
-}
-
-.btn{
- border:0;
- border-radius:12px;
- padding:13px 12px;
- font-size:13px;
- font-weight:800;
- cursor:pointer;
- transition:.2s;
-}
-
+.remove,.dl{border:0;background:transparent;font-size:19px;cursor:pointer;padding:4px}
+.remove{color:#ff7188}
+.dl{color:var(--green)}
+.remove:disabled{opacity:.3}
+.progress{height:4px;background:#ffffff10;border-radius:10px;overflow:hidden;margin-top:9px}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:10px;transition:width .2s}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.btn{border:0;border-radius:12px;padding:13px 12px;font-size:13px;font-weight:800;cursor:pointer;transition:.2s;color:#fff}
 .btn:disabled{opacity:.4;cursor:not-allowed}
-
-.primary{
- color:white;
- background:linear-gradient(110deg,#875bff,#6144db);
- box-shadow:0 5px 20px #875bff30;
-}
-
-.secondary{
- background:#ffffff0c;
- border:1px solid var(--border);
- color:white;
-}
-
+.primary{background:linear-gradient(110deg,#875bff,#6144db);box-shadow:0 5px 20px #875bff30}
+.secondary{background:#ffffff0c;border:1px solid var(--border)}
 .btn:not(:disabled):active{transform:scale(.98)}
-
 .global-progress{margin-top:19px;display:none}
-
-.global-info{
- display:flex;justify-content:space-between;
- font-size:11px;color:var(--muted);
- margin-bottom:8px;
-}
-
-.global-track{
- height:8px;background:#ffffff12;
- border-radius:20px;overflow:hidden;
-}
-
-.global-fill{
- height:100%;width:0%;
- background:linear-gradient(90deg,var(--purple),var(--cyan));
- transition:width .25s;
-}
-
-.results{
- display:none;
- text-align:center;
- margin-top:16px;
- padding:16px;
- border-radius:13px;
- background:#37d99a0b;
- border:1px solid #37d99a35;
-}
-
+.global-info{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:8px}
+.global-track{height:8px;background:#ffffff12;border-radius:20px;overflow:hidden}
+.global-fill{height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--cyan));transition:width .25s}
+.results{display:none;text-align:center;margin-top:16px;padding:16px;border-radius:13px;background:#37d99a0b;border:1px solid #37d99a35}
 .results h3{color:var(--green);margin:0 0 6px}
 .results p{font-size:12px;color:var(--muted)}
-
-.notice{
- font-size:11px;
- color:var(--muted);
- line-height:1.9;
- text-align:center;
- margin-top:20px;
-}
-
-footer{
- text-align:center;
- color:#69718a;
- font-size:11px;
- margin-top:30px;
- direction:ltr;
-}
-
-@media(max-width:500px){
- .container{padding-top:19px}
- .panel{padding:14px}
- .settings{grid-template-columns:1fr 1fr}
- .actions{grid-template-columns:1fr}
- .hero h1{font-size:33px}
-}
+.notice{font-size:11px;color:var(--muted);line-height:1.9;text-align:center;margin-top:20px}
+footer{text-align:center;color:#69718a;font-size:11px;margin-top:30px;direction:ltr}
+@media(max-width:500px){.container{padding-top:19px}.panel{padding:14px}.actions{grid-template-columns:1fr}.hero h1{font-size:33px}}
 </style>
 </head>
-
 <body>
-
 <div class="container">
-
 <header>
- <div class="logo">
-  <div class="logo-icon">♫</div>
-  ALPHA MP3
- </div>
+ <div class="logo"><div class="logo-icon">♫</div>ALPHA MP3</div>
  <div class="status">● ONLINE</div>
 </header>
 
@@ -394,7 +88,6 @@ footer{
 </section>
 
 <section class="panel">
-
  <label class="upload" id="dropZone" for="fileInput">
   <div class="upload-icon">⬆</div>
   <h3>اختر فيديوهاتك هنا</h3>
@@ -402,115 +95,73 @@ footer{
   <strong>الحد الأقصى 26 فيديو</strong>
   <p>MP4 · MOV · WEBM · MKV · AVI</p>
  </label>
-
- <input type="file" id="fileInput" accept="video/*,.mkv,.avi,.mov,.webm,.mp4" multiple>
-
+ <input type="file" id="fileInput" accept="video/*,.mkv,.avi,.mov,.webm,.mp4,.m4v,.3gp,.mpeg,.mpg,.wmv" multiple>
  <div class="settings">
   <div class="field">
-   <label>جودة الصوت</label>
+   <label for="quality">جودة الصوت (ثابتة CBR)</label>
    <select id="quality">
     <option value="128k">128 kbps</option>
-    <option value="192k" selected>192 kbps</option>
+    <option value="192k">192 kbps</option>
     <option value="256k">256 kbps</option>
-    <option value="320k">320 kbps</option>
+    <option value="320k" selected>320 kbps</option>
    </select>
   </div>
   <div class="field">
-   <label>معدل الصوت</label>
+   <label for="sampleRate">معدل الصوت</label>
    <select id="sampleRate">
     <option value="44100" selected>44100 Hz</option>
     <option value="48000">48000 Hz</option>
    </select>
   </div>
  </div>
-
 </section>
 
 <section class="panel">
-
  <div class="section-head">
   <h3>📁 قائمة الفيديوهات</h3>
   <span class="counter" id="counter">0 / 26</span>
  </div>
-
- <div class="files-list" id="filesList">
-  <div class="empty">لم تقم بإضافة أي فيديو حتى الآن</div>
- </div>
-
+ <div class="files-list" id="filesList"><div class="empty">لم تقم بإضافة أي فيديو حتى الآن</div></div>
  <div class="actions">
-  <button class="btn primary" id="convertBtn" disabled>
-   ⚡ تحويل جميع الفيديوهات
-  </button>
-  <button class="btn secondary" id="zipBtn" disabled>
-   ↓ تحميل الكل ZIP
-  </button>
+  <button class="btn primary" id="convertBtn" disabled>⚡ تحويل جميع الفيديوهات</button>
+  <button class="btn secondary" id="zipBtn" disabled>↓ تحميل الكل ZIP</button>
  </div>
-
  <div class="global-progress" id="globalProgress">
-  <div class="global-info">
-   <span id="progressText">جارٍ التحضير...</span>
-   <span id="progressPercent">0%</span>
-  </div>
-  <div class="global-track">
-   <div class="global-fill" id="globalFill"></div>
-  </div>
+  <div class="global-info"><span id="progressText">جارٍ التحضير...</span><span id="progressPercent">0%</span></div>
+  <div class="global-track"><div class="global-fill" id="globalFill"></div></div>
  </div>
-
  <div class="results" id="results">
   <h3>✓ اكتمل التحويل</h3>
   <p id="resultText"></p>
   <button class="btn primary" id="downloadAllBtn">تحميل جميع الملفات ZIP</button>
  </div>
-
 </section>
 
 <div class="notice">
- 🔒 تتم معالجة الملفات داخل متصفحك ولا يتم إرسال الفيديوهات إلى خادم خارجي.
-<br>
- تعتمد سرعة التحويل على حجم الفيديو وإمكانيات جهازك.
+ 🔒 تتم معالجة الملفات داخل متصفحك ولا يتم إرسال الفيديوهات إلى خادم خارجي.<br>
+ تعتمد سرعة التحويل على حجم الفيديو وإمكانيات جهازك. أسماء الملفات الناتجة بالإنجليزية ومرقّمة لتعمل على أجهزة السيارات.
 </div>
-
 <footer>ALPHA MP3 · VIDEO TO AUDIO CONVERTER</footer>
-
 </div>
 
 <script type="module">
-
-import { FFmpeg } from
-'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js';
-
-import { fetchFile, toBlobURL } from
-'https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.2/dist/esm/index.js';
-
-import JSZip from
-'https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm';
+import { FFmpeg } from 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js';
+import { fetchFile, toBlobURL } from 'https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.2/dist/esm/index.js';
+import JSZip from 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm';
 
 const $ = id => document.getElementById(id);
+const CDN = 'https://cdn.jsdelivr.net/npm/';
+const MAX_FILES = 26;
+const formats = ['mp4','mov','webm','mkv','avi','m4v','3gp','mpeg','mpg','wmv'];
 
 const ffmpeg = new FFmpeg();
+let files = [], outputs = [], states = {};
+let busy = false, ffmpegLoaded = false, currentIndex = -1;
 
-let files = [];
-let outputs = [];
-let busy = false;
-let ffmpegLoaded = false;
-let currentIndex = -1;
-
-const MAX_FILES = 26;
-
-const formats = [
- 'mp4','mov','webm','mkv','avi',
- 'm4v','3gp','mpeg','mpg','wmv'
-];
-
-function sizeFormat(bytes){
- if(bytes < 1024) return bytes+' B';
- if(bytes < 1048576) return (bytes/1024).toFixed(1)+' KB';
- return (bytes/1048576).toFixed(1)+' MB';
-}
-
-function safeName(name){
- return name.replace(/\.[^.]+$/,'')
- .replace(/[\\/:*?"<>|]/g,'_');
+function sizeFormat(b){
+ if(b < 1024) return b + ' B';
+ if(b < 1048576) return (b/1024).toFixed(1) + ' KB';
+ return (b/1048576).toFixed(1) + ' MB';
 }
 
 function extension(name){
@@ -518,294 +169,265 @@ function extension(name){
  return formats.includes(ext) ? ext : 'mp4';
 }
 
+// اسم إنجليزي مرقّم: يعمل على الفلاش والسيارات (FAT32)
+function outName(name, i){
+ const base = name.replace(/\.[^.]+$/, '')
+  .replace(/[^A-Za-z0-9 _-]+/g, '').trim()
+  .replace(/\s+/g, '_').slice(0, 40);
+ return String(i + 1).padStart(2, '0') + '_' + (base || 'track') + '.mp3';
+}
+
+function saveBlob(blob, name){
+ const url = URL.createObjectURL(blob);
+ const a = document.createElement('a');
+ a.href = url; a.download = name;
+ document.body.appendChild(a); a.click(); a.remove();
+ setTimeout(() => URL.revokeObjectURL(url), 30000);
+}
+
 function updateCounter(){
- $('counter').textContent = files.length+' / 26';
+ $('counter').textContent = files.length + ' / ' + MAX_FILES;
  $('convertBtn').disabled = !files.length || busy;
  $('zipBtn').disabled = !outputs.length || busy;
+ $('downloadAllBtn').disabled = !outputs.length || busy;
 }
 
 function render(){
-
  const list = $('filesList');
  list.innerHTML = '';
-
  if(!files.length){
-  list.innerHTML =
-  '<div class="empty">لم تقم بإضافة أي فيديو حتى الآن</div>';
+  list.innerHTML = '<div class="empty">لم تقم بإضافة أي فيديو حتى الآن</div>';
   updateCounter();
   return;
  }
-
- files.forEach((file,index)=>{
-
-  const output = outputs.find(o=>o.index===index);
+ files.forEach((file, index) => {
+  const output = outputs.find(o => o.index === index);
+  const st = states[index];
 
   const item = document.createElement('div');
-  item.className='file-item';
+  item.className = 'file-item';
 
   const icon = document.createElement('div');
-  icon.className='file-icon';
-  icon.textContent='🎬';
+  icon.className = 'file-icon';
+  icon.textContent = '🎬';
 
   const info = document.createElement('div');
-  info.className='file-info';
-
+  info.className = 'file-info';
   const name = document.createElement('div');
-  name.className='file-name';
-  name.textContent=file.name;
-
+  name.className = 'file-name';
+  name.textContent = file.name;
   const meta = document.createElement('div');
-  meta.className='file-meta';
-  meta.textContent=sizeFormat(file.size);
-
+  meta.className = 'file-meta';
+  meta.textContent = sizeFormat(file.size);
   const bar = document.createElement('div');
-  bar.className='progress';
-
+  bar.className = 'progress';
   const fill = document.createElement('div');
-  fill.className='progress-bar';
-  fill.id='bar-'+index;
-
+  fill.className = 'progress-bar';
+  fill.id = 'bar-' + index;
+  if(st === 'done') fill.style.width = '100%';
   bar.appendChild(fill);
-  info.append(name,meta,bar);
+  info.append(name, meta, bar);
 
   const state = document.createElement('div');
-  state.className='file-state';
-  state.id='state-'+index;
-  state.textContent=output?'تم التحويل':'جاهز';
+  state.className = 'file-state' + (st ? ' ' + st : '');
+  state.id = 'state-' + index;
+  state.textContent = st === 'done' ? '✓ اكتمل' : st === 'error' ? 'فشل التحويل' : 'جاهز';
 
-  if(output) state.classList.add('done');
+  item.append(icon, info, state);
+
+  if(output){
+   const dl = document.createElement('button');
+   dl.className = 'dl';
+   dl.textContent = '⬇';
+   dl.title = 'تحميل';
+   dl.onclick = () => saveBlob(output.blob, output.name);
+   item.appendChild(dl);
+  }
 
   const remove = document.createElement('button');
-  remove.className='remove';
-  remove.textContent='×';
-  remove.title='حذف';
-  remove.disabled=busy;
-  remove.onclick=()=>removeFile(index);
+  remove.className = 'remove';
+  remove.textContent = '×';
+  remove.title = 'حذف';
+  remove.disabled = busy;
+  remove.onclick = () => removeFile(index);
+  item.appendChild(remove);
 
-  item.append(icon,info,state,remove);
   list.appendChild(item);
  });
-
  updateCounter();
 }
 
 function addFiles(selected){
-
- const incoming = Array.from(selected);
-
- for(const file of incoming){
-
-  if(files.length>=MAX_FILES){
-   alert('الحد الأقصى هو 26 فيديو.');
-   break;
-  }
-
-  if(!file.type.startsWith('video/') &&
-     !formats.includes(extension(file.name))){
-   continue;
-  }
-
-  if(files.some(f=>f.name===file.name &&
-      f.size===file.size)){
-   continue;
-  }
-
+ for(const file of Array.from(selected)){
+  if(files.length >= MAX_FILES){ alert('الحد الأقصى هو 26 فيديو.'); break; }
+  if(!file.type.startsWith('video/') && !formats.includes(extension(file.name))) continue;
+  if(files.some(f => f.name === file.name && f.size === file.size)) continue;
   files.push(file);
  }
-
- $('results').style.display='none';
+ outputs = []; states = {};
+ $('results').style.display = 'none';
  render();
 }
 
 function removeFile(index){
  if(busy) return;
-
- files.splice(index,1);
- outputs=[];
+ files.splice(index, 1);
+ outputs = []; states = {};
+ $('results').style.display = 'none';
  render();
- $('results').style.display='none';
 }
 
-$('fileInput').addEventListener('change',e=>{
- addFiles(e.target.files);
- e.target.value='';
-});
+$('fileInput').addEventListener('change', e => { addFiles(e.target.files); e.target.value = ''; });
 
 const drop = $('dropZone');
-
-drop.addEventListener('dragover',e=>{
- e.preventDefault();
- drop.classList.add('drag');
-});
-
-drop.addEventListener('dragleave',()=>{
- drop.classList.remove('drag');
-});
-
-drop.addEventListener('drop',e=>{
- e.preventDefault();
- drop.classList.remove('drag');
- addFiles(e.dataTransfer.files);
-});
-
+drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag'); });
+drop.addEventListener('dragleave', () => drop.classList.remove('drag'));
+drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('drag'); addFiles(e.dataTransfer.files); });
 
 async function loadEngine(){
-
  if(ffmpegLoaded) return;
+ $('progressText').textContent = 'تحميل محرك التحويل (مرة واحدة)...';
 
- $('progressText').textContent='تحميل محرك التحويل...';
+ // الـ Worker لا يعمل من نطاق خارجي مباشرة، لذلك نغلفه بملف Blob محلي
+ const workerBlob = new Blob(
+  ['import "' + CDN + '@ffmpeg/ffmpeg@0.12.10/dist/esm/worker.js";'],
+  { type: 'text/javascript' }
+ );
+ const classWorkerURL = URL.createObjectURL(workerBlob);
 
- const base =
- 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/umd';
+ const base = CDN + '@ffmpeg/core@0.12.6/dist/esm';
+ await ffmpeg.load({
+  classWorkerURL,
+  coreURL: await toBlobURL(base + '/ffmpeg-core.js', 'text/javascript'),
+  wasmURL: await toBlobURL(base + '/ffmpeg-core.wasm', 'application/wasm')
+ });
+ ffmpegLoaded = true;
+}
 
- try {
+ffmpeg.on('progress', ({ progress }) => {
+ if(currentIndex < 0) return;
+ const bar = $('bar-' + currentIndex);
+ if(bar) bar.style.width = Math.min(100, Math.max(0, progress * 100)) + '%';
+});
 
-  const coreURL = await toBlobURL(
-   base+'/ffmpeg-core.js',
-   'text/javascript'
-  );
+function buildArgs(input, output, q, sr){
+ return ['-i', input, '-vn', '-map', '0:a:0', '-ac', '2', '-ar', sr,
+  '-codec:a', 'libmp3lame', '-b:a', q, '-id3v2_version', '3', '-f', 'mp3', output];
+}
 
-  const wasmURL = await toBlobURL(
-   base+'/ffmpeg-core.wasm',
-   'application/wasm'
-  );
+async function convertOne(file, i, q, sr){
+ const inputName = 'input_' + i + '.' + extension(file.name);
+ const output = 'audio_' + i + '.mp3';
+ const mnt = '/m' + i;
+ let mounted = false, code = -1;
 
-  await ffmpeg.load({
-   coreURL,
-   wasmURL
-  });
+ // قراءة الملف مباشرة بدون نسخه للذاكرة (أفضل للفيديوهات الكبيرة)
+ try{
+  await ffmpeg.createDir(mnt);
+  await ffmpeg.mount('WORKERFS', { files: [new File([file], inputName)] }, mnt);
+  mounted = true;
+  code = await ffmpeg.exec(buildArgs(mnt + '/' + inputName, output, q, sr));
+ }catch(e){ console.warn('mount failed, fallback', e); code = -1; }
 
-  ffmpegLoaded=true;
+ if(code !== 0){
+  try{ await ffmpeg.deleteFile(output); }catch(e){}
+  await ffmpeg.writeFile(inputName, await fetchFile(file));
+  code = await ffmpeg.exec(buildArgs(inputName, output, q, sr));
+ }
 
- } catch(error) {
-
-  console.error('FFmpeg Loading Error:',error);
-
-  throw new Error(
-   'فشل تحميل FFmpeg: '+(error.message || error)
-  );
+ try{
+  if(code !== 0) throw new Error('تعذر تحويل الفيديو (قد لا يحتوي على صوت)');
+  const data = await ffmpeg.readFile(output);
+  return new Blob([data], { type: 'audio/mpeg' });
+ }finally{
+  try{ await ffmpeg.deleteFile(inputName); }catch(e){}
+  try{ await ffmpeg.deleteFile(output); }catch(e){}
+  if(mounted){
+   try{ await ffmpeg.unmount(mnt); }catch(e){}
+   try{ await ffmpeg.deleteDir(mnt); }catch(e){}
+  }
  }
 }
 
+async function convert(){
+ if(busy || !files.length) return;
+ busy = true; outputs = []; states = {};
+ render();
+ $('results').style.display = 'none';
+ $('globalProgress').style.display = 'block';
+ $('globalFill').style.width = '0%';
+ $('progressPercent').textContent = '0%';
 
-    outputs.push({
-     name:safeName(file.name)+'.mp3',
-     blob,
-     index:i
-    });
+ const q = $('quality').value;
+ const sr = $('sampleRate').value;
+ let completed = 0, failed = 0;
 
+ try{
+  await loadEngine();
+  const snapshot = [...files];
+
+  for(let i = 0; i < snapshot.length; i++){
+   currentIndex = i;
+   $('progressText').textContent = 'تحويل ' + (i + 1) + ' من ' + snapshot.length;
+   const state = $('state-' + i);
+   if(state) state.textContent = 'جارٍ التحويل...';
+
+   try{
+    const blob = await convertOne(snapshot[i], i, q, sr);
+    outputs.push({ name: outName(snapshot[i].name, i), blob, index: i });
+    states[i] = 'done';
     completed++;
-
-    const bar=$('bar-'+i);
-    if(bar) bar.style.width='100%';
-
-    const state=$('state-'+i);
-    if(state){
-     state.textContent='✓ اكتمل';
-     state.classList.add('done');
-    }
-
-    await ffmpeg.deleteFile(inputName);
-    await ffmpeg.deleteFile(outputName);
-
+    const bar = $('bar-' + i);
+    if(bar) bar.style.width = '100%';
+    if(state){ state.textContent = '✓ اكتمل'; state.classList.add('done'); }
    }catch(error){
-
     console.error(error);
+    states[i] = 'error';
     failed++;
-
-    const state=$('state-'+i);
-
-    if(state){
-     state.textContent='فشل التحويل';
-     state.classList.add('error');
-    }
-
-    try{await ffmpeg.deleteFile(inputName)}catch(e){}
-    try{await ffmpeg.deleteFile(outputName)}catch(e){}
+    if(state){ state.textContent = 'فشل التحويل'; state.classList.add('error'); }
    }
 
-   const percent=Math.round((i+1)/snapshot.length*100);
-
-   $('globalFill').style.width=percent+'%';
-   $('progressPercent').textContent=percent+'%';
+   const percent = Math.round((i + 1) / snapshot.length * 100);
+   $('globalFill').style.width = percent + '%';
+   $('progressPercent').textContent = percent + '%';
   }
 
-  $('progressText').textContent='انتهى التحويل';
-  $('resultText').textContent=
-  'نجح تحويل '+completed+' فيديو، وفشل '+failed+'.';
-
-  $('results').style.display='block';
-
+  $('progressText').textContent = 'انتهى التحويل';
+  $('resultText').textContent = 'نجح تحويل ' + completed + ' فيديو، وفشل ' + failed + '.';
+  $('results').style.display = 'block';
  }catch(error){
-
   console.error(error);
-
-  alert('خطأ المحرك:\n' + (error.message || error));
-
+  alert('تعذر تشغيل محرك التحويل. تحقق من اتصال الإنترنت ثم أعد المحاولة.\n\n' + (error && error.message ? error.message : error));
  }finally{
-
-  currentIndex=-1;
-  busy=false;
-  $('convertBtn').disabled=!files.length;
-  $('zipBtn').disabled=!outputs.length;
-
-  $('downloadAllBtn').disabled=!outputs.length;
-
+  currentIndex = -1;
+  busy = false;
   render();
  }
 }
 
-$('convertBtn').addEventListener('click',convert);
+$('convertBtn').addEventListener('click', convert);
 
 async function downloadZip(){
-
  if(!outputs.length || busy) return;
-
- const btn=$('zipBtn');
- const oldText=btn.textContent;
-
- btn.disabled=true;
- btn.textContent='جارٍ تجهيز ZIP...';
-
+ const btn = $('zipBtn'), old = btn.textContent;
+ btn.disabled = true; btn.textContent = 'جارٍ تجهيز ZIP...';
  try{
-
-  const zip=new JSZip();
-
-  outputs.forEach(output=>{
-   zip.file(output.name,output.blob);
-  });
-
-  const blob=await zip.generateAsync({
-   type:'blob',
-   compression:'STORE'
-  });
-
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-
-  a.href=url;
-  a.download='Alpha_MP3_Files.zip';
-  a.click();
-
-  setTimeout(()=>URL.revokeObjectURL(url),30000);
-
+  const zip = new JSZip();
+  outputs.forEach(o => zip.file(o.name, o.blob));
+  const blob = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+  saveBlob(blob, 'Alpha_MP3_Files.zip');
  }catch(error){
-
   console.error(error);
   alert('تعذر إنشاء ملف ZIP.');
-
  }finally{
-
-  btn.disabled=false;
-  btn.textContent=oldText;
+  btn.disabled = false; btn.textContent = old;
+  updateCounter();
  }
 }
 
-$('zipBtn').addEventListener('click',downloadZip);
-$('downloadAllBtn').addEventListener('click',downloadZip);
-
+$('zipBtn').addEventListener('click', downloadZip);
+$('downloadAllBtn').addEventListener('click', downloadZip);
 updateCounter();
-
 </script>
 </body>
 </html>
